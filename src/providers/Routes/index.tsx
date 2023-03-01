@@ -14,6 +14,7 @@ export function Routes() {
       <Stack.Navigator>
         <Stack.Screen
           name="Splash"
+          initialParams={{isReady: true}}
           component={Splash}
           options={{headerShown: false}}
         />

@@ -1,13 +1,26 @@
 import React from 'react';
+import {StatusBar} from 'react-native';
 import {useBackButtonToExit} from '../../hooks/useBackButtonToExit';
 
-import {WelcomeContainer, WelcomeTitle} from './styles';
+import {
+  WelcomeContainer,
+  WelcomeBanner,
+  WelcomeTitleBanner,
+  WelcomeDescribeBanner,
+  // WelcomeCar,
+} from './styles';
 
 export function Welcome() {
   useBackButtonToExit();
+
   return (
     <WelcomeContainer>
-      <WelcomeTitle>UBER</WelcomeTitle>
+      <StatusBar animated backgroundColor={'#A100ff'} translucent />
+      <WelcomeBanner>
+        <WelcomeTitleBanner>UBER</WelcomeTitleBanner>
+        <WelcomeDescribeBanner>Get there</WelcomeDescribeBanner>
+        {/* <WelcomeCar source={{uri: ''}} /> */}
+      </WelcomeBanner>
     </WelcomeContainer>
   );
 }

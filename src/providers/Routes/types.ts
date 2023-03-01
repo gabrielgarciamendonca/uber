@@ -1,4 +1,6 @@
 export type TStack = {
-  Splash: undefined;
+  Splash: {
+    isReady: boolean;
+  };
   Welcome: undefined;
 };
