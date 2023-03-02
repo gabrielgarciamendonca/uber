@@ -6021,6 +6021,11 @@ react-native-gradle-plugin@^0.71.15:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.15.tgz#9e6b506f30729fe8eb086981702f4e3c891d2b13"
   integrity sha512-7S3pAuPaQJlhax6EZ4JMsDNpj05TfuzX9gPgWLrFfAIWIFLuJ6aDQYAZy2TEI9QJALPoWrj8LWaqP/DGYh14pw==
 
+react-native-hole-view@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-hole-view/-/react-native-hole-view-2.2.0.tgz#1f53052bfadd7e9b84825423c737ab07d4ea4abb"
+  integrity sha512-0J5AAW7ESIpRP8K3XTluYZ62+6g57SgeeoBwUFpXz/wRSk5vr3/r6vf2NGg5rmKCOFCSumJmVHZeabSRYlTdNQ==
+
 react-native-reanimated@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-3.0.0.tgz#03389efd8464b0ee1da18eb4e0bac28157c2b258"

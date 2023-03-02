@@ -3,4 +3,5 @@ export type TStack = {
     isReady: boolean;
   };
   Welcome: undefined;
+  Onboarding: undefined;
 };

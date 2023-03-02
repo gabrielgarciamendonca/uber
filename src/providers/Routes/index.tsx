@@ -1,10 +1,11 @@
 import * as React from 'react';
 
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {NavigationContainer} from '@react-navigation/native';
-import {Splash} from '../../screens/Splash';
-import {TStack} from './types';
-import {Welcome} from '../../screens/Welcome';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { Splash } from '../../screens/Splash';
+import { TStack } from './types';
+import { Welcome } from '../../screens/Welcome';
+import { Onboarding } from '../../screens/Onboarding';
 
 const Stack = createNativeStackNavigator<TStack>();
 
@@ -14,14 +15,19 @@ export function Routes() {
       <Stack.Navigator>
         <Stack.Screen
           name="Splash"
-          initialParams={{isReady: true}}
+          initialParams={{ isReady: true }}
           component={Splash}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Welcome"
           component={Welcome}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Onboarding"
+          component={Onboarding}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
