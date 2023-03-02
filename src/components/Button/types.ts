@@ -1,5 +1,5 @@
-import { PressableProps } from "react-native";
+import {PressableProps} from 'react-native';
 
 export type TButton = {
-    title: string;
-} & PressableProps
+  title: string;
+} & PressableProps;
