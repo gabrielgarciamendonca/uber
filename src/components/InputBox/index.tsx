@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import {InputChar} from '../InputChar';
-import {InputBoxContainer} from './styles';
-import {useViewModel} from './useViewModel';
+import React from 'react';
 
-export function InputBox() {
-  const [code, setCode] = useState('@@@@');
+import { InputChar } from '../InputChar';
+import { InputBoxContainer } from './styles';
+import { TInputBox } from './types';
+import { useInputBoxViewModel } from './useInputBoxViewModel';
 
-  const {onChange, refs} = useViewModel({set: setCode, value: code});
+export function InputBox({ set, value }: TInputBox) {
+  const { onChange, refs } = useInputBoxViewModel({ set, value });
 
   return (
     <InputBoxContainer>

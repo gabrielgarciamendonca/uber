@@ -1,30 +1,28 @@
 import 'styled-components';
 
+type TFont = {
+  'font-size': string;
+  'font-weight': string;
+  'font-family': string;
+  color: string;
+}
+
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       primary: string;
       secondary: string;
+      secondaryLight: string;
+      tertiary: string;
+      tertiaryLight: string;
+      error: string;
+      disabled: string;
     };
     fonts: {
-      xLarge: {
-        'font-size': string;
-        'font-weight': string;
-        'font-family': string;
-        color: string;
-      };
-      largeMedium: {
-        'font-size': string;
-        'font-weight': string;
-        'font-family': string;
-        color: string;
-      };
-      medium: {
-        'font-size': string;
-        'font-weight': string;
-        'font-family': string;
-        color: string;
-      };
+      xLarge: TFont;
+      largeMedium: TFont;
+      medium: TFont;
+      small: TFont;
     };
   }
 }

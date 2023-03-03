@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type TUseViewModel = {
+export type TInputBox = {
   set: React.Dispatch<React.SetStateAction<string>>;
   value: string;
 };

@@ -4,7 +4,12 @@ export const theme: Record<'dark' | 'light', DefaultTheme> = {
   dark: {
     colors: {
       primary: '#0D1724',
-      secondary: '#514BC3'
+      secondary: '#514BC3',
+      secondaryLight: '#4048BF',
+      tertiary: '#1A1A1A',
+      tertiaryLight: '#2A2A2A',
+      error: '#FF3333',
+      disabled: '#514BC32F'
     },
     fonts: {
       xLarge: {
@@ -21,6 +26,12 @@ export const theme: Record<'dark' | 'light', DefaultTheme> = {
       },
       medium: {
         'font-size': '14px',
+        'font-weight': '400',
+        'font-family': 'Poppins',
+        color: '#FFF',
+      },
+      small: {
+        'font-size': '12px',
         'font-weight': '400',
         'font-family': 'Poppins',
         color: '#FFF',
@@ -30,7 +41,12 @@ export const theme: Record<'dark' | 'light', DefaultTheme> = {
   light: {
     colors: {
       primary: '#FFF',
-      secondary: '#514BC3'
+      secondary: '#514BC3',
+      secondaryLight: '#4048BF',
+      tertiary: '#58517B',
+      tertiaryLight: '#2A2A2A',
+      error: '#FF3333',
+      disabled: '#514BC32F'
     },
     fonts: {
       xLarge: {
@@ -50,6 +66,12 @@ export const theme: Record<'dark' | 'light', DefaultTheme> = {
         'font-weight': '400',
         'font-family': 'Poppins',
         color: '#0D1724',
+      },
+      small: {
+        'font-size': '12px',
+        'font-weight': '400',
+        'font-family': 'Poppins',
+        color: '#FFF',
       },
     },
   },

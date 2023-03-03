@@ -6,5 +6,6 @@
       "jest",
       "styled-components-react-native"
     ],
+    "strict": true
   },
 }

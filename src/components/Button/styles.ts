@@ -1,16 +1,13 @@
-import {Pressable} from 'react-native';
+import { Pressable } from 'react-native';
 import Animated from 'react-native-reanimated';
 import styled from 'styled-components/native';
-import {RNHoleView} from 'react-native-hole-view';
+import { RNHoleView } from 'react-native-hole-view';
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 export const ButtonContainer = styled(AnimatedPressable)`
-  /* THEME */
-  background-color: ${props => props.theme.colors.secondary};
 
   border-radius: 16px;
-  margin: 0px 30px 0px 30px;
 `;
 
 export const ButtonOpacityCircle = styled(Animated.View)`

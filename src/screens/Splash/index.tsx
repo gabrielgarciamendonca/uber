@@ -1,22 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
-import {LottieContainer, SplashContainer} from './styles';
+import { LottieContainer, SplashContainer } from './styles';
 import Lottie from 'lottie-react-native';
-import {useNavigation, useRoute} from '@react-navigation/native';
-import {TRouteSplash, TSplash} from './types';
+import { useSplashViewModel } from './useSplashViewModel';
 
 export function Splash() {
-  const {navigate} = useNavigation<TSplash>();
-  const {params} = useRoute<TRouteSplash>();
-
-  useEffect(() => {
-    //Splash Screen is a screen to load all u need to load in this application
-    setTimeout(() => {
-      console.log(`[UBER] ready ✅ ${params.isReady}`);
-      navigate('Welcome');
-    }, 1000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  useSplashViewModel();
 
   return (
     <SplashContainer>

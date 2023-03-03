@@ -1,12 +1,12 @@
 import React from 'react';
-import {InputBox} from '../../components/InputBox';
+import { Confirmation } from './Confirmation';
+import { Phone } from './Phone';
 
-import {OnboardingContainer} from './styles';
 
 export function Onboarding() {
+
   return (
-    <OnboardingContainer>
-      <InputBox />
-    </OnboardingContainer>
+    <Phone />
+    // <Confirmation />
   );
 }

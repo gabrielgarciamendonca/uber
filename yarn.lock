@@ -2444,6 +2444,11 @@ braces@^3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
+brazilian-values@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/brazilian-values/-/brazilian-values-0.12.0.tgz#99a8d9c5ef115399a4bd057a31bc42afe321278f"
+  integrity sha512-OlB+fNhbmn/PEn9Cr5sZ480GiRtDA26dv0swrDB7BAdyaOHLBeA9cYBbhdgSAx57yA82xZyhmjkijggFt5K1Lw==
+
 browserslist@^4.21.3, browserslist@^4.21.5:
   version "4.21.5"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.21.5.tgz#75c5dae60063ee641f977e00edd3cfb2fb7af6a7"
@@ -6016,6 +6021,11 @@ react-native-codegen@^0.71.5:
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
 
+react-native-country-codes-picker@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-country-codes-picker/-/react-native-country-codes-picker-2.3.0.tgz#5eeccf8c390292ed12b85c6060a5328c8fba1056"
+  integrity sha512-TqKpiguAcQvwj7oHJYUytZNV7enNHPKt6xF0V/q696V+OBysvrdhEy33ueNBywGQQUMLqDcbnooF/lOoTrkatw==
+
 react-native-gradle-plugin@^0.71.15:
   version "0.71.15"
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.15.tgz#9e6b506f30729fe8eb086981702f4e3c891d2b13"
@@ -6025,6 +6035,11 @@ react-native-hole-view@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-native-hole-view/-/react-native-hole-view-2.2.0.tgz#1f53052bfadd7e9b84825423c737ab07d4ea4abb"
   integrity sha512-0J5AAW7ESIpRP8K3XTluYZ62+6g57SgeeoBwUFpXz/wRSk5vr3/r6vf2NGg5rmKCOFCSumJmVHZeabSRYlTdNQ==
+
+react-native-mask-input@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/react-native-mask-input/-/react-native-mask-input-1.2.3.tgz#c588b145bb48098be54ac6b40ebe7363a302428b"
+  integrity sha512-RWx+gc1EaBslJWR6dsvGdILJ5XvnvZuyEsgJaH9uAMukB3Z9eOlxra1E7Ovck8NSMVcYWpBB/lzojO4LwqqXgA==
 
 react-native-reanimated@^3.0.0:
   version "3.0.0"
@@ -7318,3 +7333,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zod@^3.20.6:
+  version "3.20.6"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.20.6.tgz#2f2f08ff81291d47d99e86140fedb4e0db08361a"
+  integrity sha512-oyu0m54SGCtzh6EClBVqDDlAYRz4jrVtKwQ7ZnsEmMI9HnzuZFj8QFwAY1M5uniIYACdGvv0PBWPF2kO0aNofA==

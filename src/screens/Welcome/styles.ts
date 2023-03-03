@@ -36,3 +36,7 @@ export const WelcomeDescribeBanner = styled.Text`
 export const WelcomeCar = styled.Image`
   width: 100%;
 `;
+
+export const WelcomeButtonContainer = styled.View`
+  margin: 0px 30px;
+`;
