@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Splash } from '../../screens/Splash';
 import { TStack } from './types';
 import { Welcome } from '../../screens/Welcome';
-import { Onboarding } from '../../screens/Onboarding';
+import { Onboarding } from './Onboarding';
 
 const Stack = createNativeStackNavigator<TStack>();
 

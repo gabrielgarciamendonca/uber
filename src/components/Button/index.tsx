@@ -17,7 +17,7 @@ export function Button({ title, error, ...rest }: TButton) {
       {...rest}
       style={[style, styleDisabled]}
       onPressIn={onPressIn}
-      disabled={Boolean(error)}
+      disabled={error}
       onPressOut={onPressOut}>
       <ButtonContent>
         <ButtonOpacityCircle style={styleOpacity} />

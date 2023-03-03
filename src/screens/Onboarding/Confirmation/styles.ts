@@ -11,6 +11,10 @@ export const ConfirmationContainer = styled(SafeAreaView)`
   background-color: ${props => props.theme.colors.primary};
 `;
 
+export const ConfirmationTitleContainer = styled.View`
+  
+`;
+
 export const ConfirmationTitle = styled.Text`
   ${props => props.theme.fonts.medium};
 `;
