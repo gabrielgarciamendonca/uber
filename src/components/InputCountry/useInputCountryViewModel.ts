@@ -1,20 +1,18 @@
-import { useCallback, useState } from "react";
-import { useTheme } from "styled-components/native";
-
-
+import {useCallback, useState} from 'react';
+import {useTheme} from 'styled-components/native';
 
 export function useInputCountryViewModel() {
-    const { colors } = useTheme()
+  const theme = useTheme();
 
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-    const handleOpenModal = useCallback(() => {
-        setOpen(true);
-    }, [])
-    return {
-        colors,
-        open,
-        handleOpenModal,
-        setOpen
-    }
+  const handleOpenModal = useCallback(() => {
+    setOpen(true);
+  }, []);
+  return {
+    theme,
+    open,
+    handleOpenModal,
+    setOpen,
+  };
 }

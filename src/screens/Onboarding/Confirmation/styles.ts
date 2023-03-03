@@ -1,4 +1,4 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import styled from 'styled-components/native';
 
 export const ConfirmationContainer = styled(SafeAreaView)`
@@ -11,9 +11,7 @@ export const ConfirmationContainer = styled(SafeAreaView)`
   background-color: ${props => props.theme.colors.primary};
 `;
 
-export const ConfirmationTitleContainer = styled.View`
-  
-`;
+export const ConfirmationTitleContainer = styled.View``;
 
 export const ConfirmationTitle = styled.Text`
   ${props => props.theme.fonts.medium};

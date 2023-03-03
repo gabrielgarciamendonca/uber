@@ -5,7 +5,7 @@ type TFont = {
   'font-weight': string;
   'font-family': string;
   color: string;
-}
+};
 
 declare module 'styled-components' {
   export interface DefaultTheme {

@@ -1,12 +1,12 @@
-import { useCallback, useEffect, useRef } from 'react';
+import {useCallback, useEffect, useRef} from 'react';
 import {
   NativeSyntheticEvent,
   TextInput,
   TextInputKeyPressEventData,
 } from 'react-native';
-import { TInputBox } from './types';
+import {TInputBox} from './types';
 
-export function useInputBoxViewModel({ set, value }: TInputBox) {
+export function useInputBoxViewModel({set, value}: TInputBox) {
   const refInput1 = useRef<TextInput>(null);
   const refInput2 = useRef<TextInput>(null);
   const refInput3 = useRef<TextInput>(null);

@@ -4,4 +4,5 @@ export type TStack = {
   };
   Welcome: undefined;
   Onboarding: undefined;
+  Home: undefined;
 };

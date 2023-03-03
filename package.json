@@ -18,6 +18,7 @@
     "react-native": "0.71.3",
     "react-native-country-codes-picker": "^2.3.0",
     "react-native-hole-view": "^2.2.0",
+    "react-native-maps": "^1.4.0",
     "react-native-mask-input": "^1.2.3",
     "react-native-reanimated": "^3.0.0",
     "react-native-safe-area-context": "^4.5.0",

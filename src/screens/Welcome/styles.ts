@@ -1,4 +1,4 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import styled from 'styled-components/native';
 
 export const WelcomeContainer = styled(SafeAreaView)`
@@ -23,7 +23,6 @@ export const WelcomeLabels = styled.View`
 `;
 
 export const WelcomeTitleBanner = styled.Text`
-
   /* THEME */
   ${props => props.theme.fonts.xLarge}
 `;

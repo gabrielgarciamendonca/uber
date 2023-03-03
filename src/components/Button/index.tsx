@@ -1,28 +1,23 @@
 import React from 'react';
+import {ButtonView} from './ButtonView';
 
-import {
-  ButtonContainer,
-  ButtonTitle,
-  ButtonContent,
-  ButtonOpacityCircle,
-} from './styles';
-import { TButton } from './types';
-import { useButtonViewModel } from './useButtonViewModel';
+import {TButton} from './types';
+import {useButtonViewModel} from './useButtonViewModel';
 
-export function Button({ title, error, ...rest }: TButton) {
-  const { onPressIn, onPressOut, style, styleOpacity, styleDisabled } = useButtonViewModel({ error, ...rest });
+export function Button({title, error, ...rest}: TButton) {
+  const {onPressIn, onPressOut, style, styleOpacity, styleDisabled} =
+    useButtonViewModel({error, ...rest});
 
   return (
-    <ButtonContainer
+    <ButtonView
       {...rest}
-      style={[style, styleDisabled]}
       onPressIn={onPressIn}
-      disabled={error}
-      onPressOut={onPressOut}>
-      <ButtonContent>
-        <ButtonOpacityCircle style={styleOpacity} />
-        <ButtonTitle>{title}</ButtonTitle>
-      </ButtonContent>
-    </ButtonContainer>
+      onPressOut={onPressOut}
+      style={style}
+      styleDisabled={styleDisabled}
+      styleOpacity={styleOpacity}
+      title={title}
+      error={error}
+    />
   );
 }
