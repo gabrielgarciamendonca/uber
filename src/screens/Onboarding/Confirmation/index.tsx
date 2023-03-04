@@ -1,10 +1,10 @@
 import React from 'react';
-import {ConfirmationView} from './ConfirmationView';
+import { ConfirmationView } from './ConfirmationView';
 
-import {useConfirmationViewModel} from './useConfirmationViewModel';
+import { useConfirmationViewModel } from './useConfirmationViewModel';
 
 export function Confirmation() {
-  const {code, handleConfirm, route, setCode} = useConfirmationViewModel();
+  const { code, handleConfirm, route, setCode } = useConfirmationViewModel();
 
   return (
     <ConfirmationView

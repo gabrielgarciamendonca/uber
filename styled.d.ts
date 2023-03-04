@@ -22,6 +22,7 @@ declare module 'styled-components' {
       xLarge: TFont;
       largeMedium: TFont;
       medium: TFont;
+      medium2: TFont;
       small: TFont;
     };
   }

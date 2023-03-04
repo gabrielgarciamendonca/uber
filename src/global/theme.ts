@@ -24,6 +24,12 @@ export const theme: Record<'dark' | 'light', DefaultTheme> = {
         'font-family': 'Poppins',
         color: '#FFF',
       },
+      medium2: {
+        'font-size': '18px',
+        'font-weight': '500',
+        'font-family': 'Poppins',
+        color: '#FFF',
+      },
       medium: {
         'font-size': '14px',
         'font-weight': '400',
@@ -60,6 +66,12 @@ export const theme: Record<'dark' | 'light', DefaultTheme> = {
         'font-weight': '400',
         'font-family': 'Poppins',
         color: '#0D1724',
+      },
+      medium2: {
+        'font-size': '18px',
+        'font-weight': '500',
+        'font-family': 'Poppins',
+        color: '#FFF',
       },
       medium: {
         'font-size': '14px',

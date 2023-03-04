@@ -1,8 +1,8 @@
 import React from 'react';
-import {StatusBar} from 'react-native';
-import {Button} from '../../components/Button';
-import {TranslateX} from '../../components/TranslateX';
-import {TranslateY} from '../../components/TranslateY';
+import { StatusBar } from 'react-native';
+import { Button } from '../../components/Button';
+import { TranslateX } from '../../components/TranslateX';
+import { TranslateY } from '../../components/TranslateY';
 
 import {
   WelcomeContainer,
@@ -13,7 +13,7 @@ import {
   WelcomeLabels,
   WelcomeButtonContainer,
 } from './styles';
-import {TWelcomeView} from './types';
+import { TWelcomeView } from './types';
 
 export function WelcomeView({
   theme,
