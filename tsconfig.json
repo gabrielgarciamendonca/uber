@@ -4,7 +4,10 @@
     "types": [
       "react-native",
       "jest",
-      "styled-components-react-native"
+      "styled-components-react-native",
+    ],
+    "typeRoots": [
+      "./src/types"
     ],
     "strict": true
   },

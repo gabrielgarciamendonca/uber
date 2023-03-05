@@ -7,6 +7,7 @@ import { Home } from '../../../screens/Main/Home';
 import { useWindowDimensions } from 'react-native';
 import { MainView } from './MainView';
 import { History } from '../../../screens/Main/History';
+import { PlaceManager } from '../../../screens/Main/PlaceManager';
 
 const MainDrawer = createDrawerNavigator<TMainDrawer>();
 
@@ -19,6 +20,7 @@ export function Main() {
       drawerContent={MainView}
       screenOptions={{
         headerShown: false,
+        swipeEnabled: false,
         drawerStyle: { width: width * 0.8 },
       }}
     >
@@ -29,6 +31,10 @@ export function Main() {
       <MainDrawer.Screen
         name="History"
         component={History}
+      />
+      <MainDrawer.Screen
+        name="PlaceManager"
+        component={PlaceManager}
       />
     </MainDrawer.Navigator>
   );

@@ -14,6 +14,7 @@ declare module 'styled-components' {
       secondary: string;
       secondaryLight: string;
       tertiary: string;
+      tertiaryOpacity: string;
       tertiaryLight: string;
       error: string;
       disabled: string;

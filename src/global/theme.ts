@@ -7,6 +7,7 @@ export const theme: Record<'dark' | 'light', DefaultTheme> = {
       secondary: '#514BC3',
       secondaryLight: '#4048BF',
       tertiary: '#1A1A1A',
+      tertiaryOpacity: '#000000CF',
       tertiaryLight: '#2A2A2A',
       error: '#FF3333',
       disabled: '#514BC32F'
@@ -50,6 +51,7 @@ export const theme: Record<'dark' | 'light', DefaultTheme> = {
       secondary: '#514BC3',
       secondaryLight: '#4048BF',
       tertiary: '#58517B',
+      tertiaryOpacity: '#000000CF',
       tertiaryLight: '#2A2A2A',
       error: '#FF3333',
       disabled: '#514BC32F'

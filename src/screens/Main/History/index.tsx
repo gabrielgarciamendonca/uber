@@ -6,19 +6,14 @@ import mapStyle from '../../../assets/maps/style.json'
 import { useTheme } from 'styled-components/native';
 import { ButtonDrawer } from '../../../components/ButtonDrawer';
 import { THistory } from './types';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export function History({ navigation }: THistory) {
-  const { colors } = useTheme()
+  const { top } = useSafeAreaInsets()
 
   return (
     <HistoryContainer>
-      <StatusBar
-        animated
-        backgroundColor={colors.primary}
-        translucent
-      />
-
-      <HomeButtonMenuContainer>
+      <HomeButtonMenuContainer style={{ top: top + 20 }}>
         <ButtonDrawer onPress={() => navigation?.openDrawer()}>
           <HomeButtonImage source={require('../../../assets/icons/menu.png')} />
         </ButtonDrawer>
