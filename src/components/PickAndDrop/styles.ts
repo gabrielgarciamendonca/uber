@@ -29,6 +29,7 @@ export const PickAndDropReTitle = styled(ReText)`
     ${props => props.theme.fonts.small}
 
     margin: 0px;
+    margin-bottom: -10px;
     padding: 0px;
     color: #707070;
 `

@@ -34,6 +34,11 @@ export function Main() {
       />
       <MainDrawer.Screen
         name="PlaceManager"
+        initialParams={{
+          latitude: 0,
+          longitude: 0,
+          place: ''
+        }}
         component={PlaceManager}
       />
     </MainDrawer.Navigator>

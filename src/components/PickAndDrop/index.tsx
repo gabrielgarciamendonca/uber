@@ -25,7 +25,7 @@ export function PickAndDrop({ pickUp, opened, ...rest }: TPickAndDrop) {
     });
 
     useEffect(() => {
-        loadingShared.value = withRepeat(withTiming(30, { duration: 2000 }), 30, true)
+        loadingShared.value = withRepeat(withTiming(30, { duration: 2000 }), 30, false)
     }, [])
 
     const derivedText = useDerivedValue(() => {
@@ -65,7 +65,7 @@ export function PickAndDrop({ pickUp, opened, ...rest }: TPickAndDrop) {
                     <PickAndDropUpPoint />
                     <PickAndDropLabels>
                         <PickAndDropTitle>PICK UP</PickAndDropTitle>
-                        <PickAndDropDescription>{pickUp}</PickAndDropDescription>
+                        <PickAndDropDescription numberOfLines={1}>{pickUp}</PickAndDropDescription>
                         <PickAndDropLine />
                     </PickAndDropLabels>
                 </PickAndDropItem>}
@@ -73,7 +73,7 @@ export function PickAndDrop({ pickUp, opened, ...rest }: TPickAndDrop) {
             <PickAndDropItem onLayout={(e) => systemGetHeight(e, 'item')}>
                 <PickAndDropDropPoint />
                 <PickAndDropLabels>
-                    <PickAndDropReTitle text={derivedText} style={{ textAlignVertical: 'top' }} />
+                    <PickAndDropReTitle numberOfLines={1} text={derivedText} style={{ textAlignVertical: 'top' }} />
                     <PickAndDropDescription>Where to?</PickAndDropDescription>
                 </PickAndDropLabels>
             </PickAndDropItem>
