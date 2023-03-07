@@ -19,6 +19,8 @@ import { Loading } from '../../Loading';
 import { PickAndDrop } from '../../../components/PickAndDrop';
 import MapViewDirections from 'react-native-maps-directions';
 import { GOOGLE_API } from '@env';
+import { PickCar } from '../../../components/PickCar';
+import { Button } from '../../../components/Button';
 
 
 export function HomeView({
@@ -32,7 +34,9 @@ export function HomeView({
     top,
     destination,
     colors,
-    systemOnReady
+    systemOnReady,
+    isRouteSelected,
+    isCarSelected
 }: THomeView) {
     if (!position.loaded) {
         return <Loading />;
@@ -60,7 +64,7 @@ export function HomeView({
                 ref={mapRef}
             >
                 {
-                    destination.loaded && position.loaded && (
+                    isRouteSelected && isCarSelected && (
                         <>
                             <Marker
                                 tappable={false}
@@ -89,7 +93,7 @@ export function HomeView({
                 </ButtonDrawer>
             </HomeButtonMenuContainer>
 
-            <HomeBottomSpace>
+            {<HomeBottomSpace>
                 {!opened &&
                     <HomeButtonCurrentLocationContainer>
                         <ButtonDrawer onPress={getCurrentLocation}>
@@ -97,8 +101,12 @@ export function HomeView({
                         </ButtonDrawer>
                     </HomeButtonCurrentLocationContainer>
                 }
-                <PickAndDrop pickUp={position.name} dropOff={destination.name} opened={opened} onPress={handleOpenResume} />
-            </HomeBottomSpace>
+                {!isRouteSelected && <PickAndDrop pickUp={position.name} dropOff={destination.name} opened={opened} onPress={handleOpenResume} />}
+                {isRouteSelected && <>
+                    <PickCar />
+                    <Button title='Send Request' />
+                </>}
+            </HomeBottomSpace>}
         </HomeContainer>
     );
 }

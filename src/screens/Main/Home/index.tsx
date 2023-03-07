@@ -17,7 +17,9 @@ export function Home({ ...rest }: THome) {
     handleOpenDrawer,
     colors,
     destination,
-    systemOnReady
+    systemOnReady,
+    isRouteSelected,
+    isCarSelected
   } = useHomeViewModel(rest);
 
   return (
@@ -33,5 +35,7 @@ export function Home({ ...rest }: THome) {
       colors={colors}
       destination={destination}
       systemOnReady={systemOnReady}
+      isRouteSelected={isRouteSelected}
+      isCarSelected={isCarSelected}
     />)
 }

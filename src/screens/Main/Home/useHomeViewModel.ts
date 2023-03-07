@@ -100,7 +100,9 @@ export function useHomeViewModel({ navigation }: THome) {
         handleOpenDrawer,
         colors,
         destination: store.destination,
-        systemOnReady
+        systemOnReady,
+        isRouteSelected: store.origin.loaded && store.destination.loaded,
+        isCarSelected: false
     }
 
 }

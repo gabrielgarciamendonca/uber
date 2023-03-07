@@ -1,0 +1,1 @@
+export type TType = 'economy' | 'luxury' | 'family' | 'none'

@@ -7,7 +7,7 @@ import { location } from '../stories/location';
 import { useSnapshot } from "valtio";
 import { TPlaceManager, TPlaceManagerOptions } from './types';
 
-export function usePlaceManagerViewModel({ route, navigation }: TPlaceManager) {
+export function usePlaceManagerViewModel({ navigation }: TPlaceManager) {
     const { destination, origin } = useSnapshot(location.store);
     const [pickUp, setPickUp] = useState(origin.name);
     const pickUpRef = useRef<TextInput>(null);
