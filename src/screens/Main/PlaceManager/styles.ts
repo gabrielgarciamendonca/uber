@@ -103,3 +103,11 @@ export const PlaceManagerOptionsTitle = styled.Text`
   /* THEME */
   ${props => props.theme.fonts.medium}
 `
+
+export const PlaceManagerSearchTitle = styled.Text`
+  margin-top: 20px;
+  margin-bottom: 10px
+
+  /* THEME */
+  ${props => props.theme.fonts.medium2}
+`;

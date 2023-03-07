@@ -47,7 +47,7 @@ export function HomeView({
                 customMapStyle={mapStyle}
                 provider={PROVIDER_GOOGLE}
                 showsBuildings={false}
-                minZoomLevel={14}
+                minZoomLevel={5}
                 showsCompass={false}
                 initialRegion={{
                     latitude: position.latitude,
@@ -59,29 +59,28 @@ export function HomeView({
                 showsMyLocationButton={false}
                 ref={mapRef}
             >
-                <Marker
-                    tappable={false}
-                    coordinate={destination}
-                >
-                    <Image style={{ width: 28, resizeMode: 'contain' }} source={require('../../../assets/icons/map-ping.png')} />
-                </Marker>
-                <MapViewDirections
-                    origin={
-                        {
-                            latitude: position.latitude,
-                            longitude: position.longitude,
-                        }
-                    }
-                    mode='DRIVING'
-                    precision='high'
-                    optimizeWaypoints
-                    destination={destination}
-                    apikey={GOOGLE_API}
-                    strokeWidth={5}
-                    strokeColor={colors.secondary}
-                    onReady={systemOnReady}
-                />
-
+                {
+                    destination.loaded && position.loaded && (
+                        <>
+                            <Marker
+                                tappable={false}
+                                coordinate={destination}
+                            >
+                                <Image style={{ width: 28, resizeMode: 'contain' }} source={require('../../../assets/icons/map-ping.png')} />
+                            </Marker>
+                            <MapViewDirections
+                                origin={position}
+                                mode='DRIVING'
+                                precision='high'
+                                optimizeWaypoints
+                                destination={destination}
+                                apikey={GOOGLE_API}
+                                strokeWidth={5}
+                                strokeColor={colors.secondary}
+                                onReady={systemOnReady}
+                            />
+                        </>)
+                }
             </MapView>
 
             <HomeButtonMenuContainer style={{ top: top + 20 }}>
@@ -98,7 +97,7 @@ export function HomeView({
                         </ButtonDrawer>
                     </HomeButtonCurrentLocationContainer>
                 }
-                <PickAndDrop pickUp={position.place} opened={opened} onPress={handleOpenResume} />
+                <PickAndDrop pickUp={position.name} dropOff={destination.name} opened={opened} onPress={handleOpenResume} />
             </HomeBottomSpace>
         </HomeContainer>
     );

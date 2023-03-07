@@ -15,7 +15,7 @@ import {
 import { TPickAndDrop } from "./types";
 
 
-export function PickAndDrop({ pickUp, opened, ...rest }: TPickAndDrop) {
+export function PickAndDrop({ pickUp, opened, dropOff, ...rest }: TPickAndDrop) {
     const shared = useSharedValue(0);
     const loadingShared = useSharedValue(0);
     const [averageHeight, setAverageHeight] = useState({
@@ -25,7 +25,7 @@ export function PickAndDrop({ pickUp, opened, ...rest }: TPickAndDrop) {
     });
 
     useEffect(() => {
-        loadingShared.value = withRepeat(withTiming(30, { duration: 2000 }), 30, false)
+        loadingShared.value = withRepeat(withTiming(30, { duration: 2000 }), 30, true)
     }, [])
 
     const derivedText = useDerivedValue(() => {
@@ -73,8 +73,8 @@ export function PickAndDrop({ pickUp, opened, ...rest }: TPickAndDrop) {
             <PickAndDropItem onLayout={(e) => systemGetHeight(e, 'item')}>
                 <PickAndDropDropPoint />
                 <PickAndDropLabels>
-                    <PickAndDropReTitle numberOfLines={1} text={derivedText} style={{ textAlignVertical: 'top' }} />
-                    <PickAndDropDescription>Where to?</PickAndDropDescription>
+                    <PickAndDropReTitle text={derivedText} style={{ textAlignVertical: 'top' }} />
+                    <PickAndDropDescription numberOfLines={1}>{dropOff === '' ? 'Where to?' : dropOff}</PickAndDropDescription>
                 </PickAndDropLabels>
             </PickAndDropItem>
         </PickAndDropContainer>
