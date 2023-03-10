@@ -5,6 +5,8 @@ import {
     useState
 } from 'react';
 
+import { Animated} from 'react-native'
+
 import MapView from 'react-native-maps';
 import { THome } from './types';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -14,15 +16,18 @@ import { GOOGLE_API } from '@env';
 import { useTheme } from 'styled-components/native';
 import { useSnapshot } from "valtio";
 import { location } from '../stories/location';
+import { car } from '../stories/car';
+import { TType } from '../../../types/types';
 
 export function useHomeViewModel({ navigation }: THome) {
     const [count, setCount] = useState(0);
     const store = useSnapshot(location.store);
+    const carStore = useSnapshot(car.store);
     const [opened, setOpened] = useState(false);
     const { colors } = useTheme()
     const mapRef = useRef<MapView>(null);
     const { top } = useSafeAreaInsets();
-
+    const [carType, setCarType] = useState<TType>("none")
     useEffect(() => {
         Geolocation.getCurrentPosition(info => {
             api.position.get(`json?latlng=${info.coords.latitude}, ${info.coords.longitude}&key=${GOOGLE_API}`)
@@ -49,6 +54,22 @@ export function useHomeViewModel({ navigation }: THome) {
                     });
                 });
         });
+    }, []);
+
+    const handleSelectType = useCallback((item: TType) => {
+        setCarType(item);
+    }, []);
+
+    const handleSubmit = useCallback(() => {
+        car.changeCar({
+            image: "",
+            isSelected: true,
+            name: "",
+            price: 0,
+            seats: 0,
+            time: new Date(),
+            type: carType,
+        })
     }, []);
 
 
@@ -101,8 +122,11 @@ export function useHomeViewModel({ navigation }: THome) {
         colors,
         destination: store.destination,
         systemOnReady,
-        isRouteSelected: store.origin.loaded && store.destination.loaded,
-        isCarSelected: false
+        isRouteSelected: store.destination.loaded && store.origin.loaded,
+        isCarSelected: carStore.isSelected,
+        carType,
+        handleSelectType,
+        handleSubmit
     }
 
 }

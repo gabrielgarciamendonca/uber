@@ -12,6 +12,8 @@ export const PickCarContainer = styled.View`
   justify-content: space-between;
   margin-bottom: 20px;
 
+  padding-bottom: 40px;
+
   /* THEME */
   background-color: ${props => props.theme.colors.tertiaryOpacity};
 `;
@@ -29,4 +31,9 @@ export const PickCarItemImage = styled(AnimatedImage)`
     width: 85px;
     height: 85px;
     margin-bottom: 25px;
+`;
+
+export const PickCarItemTitle = styled.Text`
+  ${props => props.theme.fonts.medium};
+  color: #FFF;
 `;

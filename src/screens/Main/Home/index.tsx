@@ -19,7 +19,10 @@ export function Home({ ...rest }: THome) {
     destination,
     systemOnReady,
     isRouteSelected,
-    isCarSelected
+    isCarSelected,
+    carType,
+    handleSelectType,
+    handleSubmit
   } = useHomeViewModel(rest);
 
   return (
@@ -37,5 +40,8 @@ export function Home({ ...rest }: THome) {
       systemOnReady={systemOnReady}
       isRouteSelected={isRouteSelected}
       isCarSelected={isCarSelected}
+      carType={carType}
+      handleSelectType={handleSelectType}
+      handleSubmit={handleSubmit}
     />)
 }

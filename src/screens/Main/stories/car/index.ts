@@ -32,7 +32,7 @@ const resetAll = () => {
     store.isSelected = false;
 }
 
-export const location = {
+export const car = {
     store,
     changeCar,
     resetAll

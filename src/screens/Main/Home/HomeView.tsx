@@ -36,7 +36,10 @@ export function HomeView({
     colors,
     systemOnReady,
     isRouteSelected,
-    isCarSelected
+    isCarSelected,
+    handleSelectType,
+    carType,
+    handleSubmit
 }: THomeView) {
     if (!position.loaded) {
         return <Loading />;
@@ -102,9 +105,9 @@ export function HomeView({
                     </HomeButtonCurrentLocationContainer>
                 }
                 {!isRouteSelected && <PickAndDrop pickUp={position.name} dropOff={destination.name} opened={opened} onPress={handleOpenResume} />}
-                {isRouteSelected && <>
-                    <PickCar />
-                    <Button title='Send Request' />
+                {isRouteSelected && !isCarSelected &&  <>
+                    <PickCar selected={carType} handleSelect={handleSelectType} />
+                    <Button title='Send Request' onPress={handleSubmit} />
                 </>}
             </HomeBottomSpace>}
         </HomeContainer>
